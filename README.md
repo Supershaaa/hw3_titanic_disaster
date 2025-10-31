@@ -7,6 +7,7 @@ This repo sets up two pipelines in Python and R to
 4. generate predictions on survival to src/out/.
 
 And this is the structure of the repo:
+```
 .
 ├─ Dockerfile                       # Python container
 ├─ out
@@ -21,3 +22,4 @@ And this is the structure of the repo:
       ├─ Dockerfile                 # R container
       ├─ install_packages.R
       └─ app.R                      # R pipeline
+```
