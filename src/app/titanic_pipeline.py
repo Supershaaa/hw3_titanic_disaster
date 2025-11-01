@@ -17,7 +17,7 @@ def loud(msg):
 HERE = pathlib.Path(__file__).resolve()
 ROOT = HERE.parents[2]                 # repo root
 DATA_DIR = ROOT / "src" / "data"
-OUT_DIR  = pathlib.Path("/app/out")  #OUT_DIR  = ROOT / "src" / "output"
+OUT_DIR  = ROOT / "src" / "out"   #OUT_DIR  = ROOT / "src" / "output"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # --- Load data
