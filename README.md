@@ -23,5 +23,49 @@ And this is the structure of the repo:
       ├─ install_packages.R
       └─ app.R                      # R pipeline
 ```
-To get the data,
+
+To get the data, create the data & output folders in terminal:
+```
+mkdir -p src/data src/out
+```
+Then download the standard Titanic data files and place them here:
+```
+src/data/train.csv
+src/data/test.csv
+```
+To run the python pipeline (Docker):
+first, build the image in terminal
+```
+docker build -t titanic-app .
+```
+Then, run the container in terminal
+```
+docker run --rm \
+  -v "$(pwd)/src/data:/app/src/data" \
+  -v "$(pwd)/src/out:/app/src/out" \
+  titanic-app
+```
+You will see logs about data loading, feature engineering, and model training.
+Then, the training accuracy, and a file src/out/predictions.csv created.
+
+To run the R pipeline (Docker):
+first, build the image in terminal
+```
+docker build -t titanic-r src/r
+```
+Then, run the container in terminal
+```
+docker run --rm \
+  -v "$(pwd)/src/data:/app/src/data" \
+  -v "$(pwd)/src/out:/app/src/out" \
+  titanic-r
+```
+You will see logs about data loading, feature engineering, and model training.
+Then, the training accuracy, and a file src/out/predictions_r.csv created.
+
+
+
+
+
+
 
