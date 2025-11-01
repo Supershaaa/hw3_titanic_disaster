@@ -7,8 +7,8 @@ suppressPackageStartupMessages({
 loud <- function(msg) cat(sprintf("[INFO] %s\n", msg))
 
 DATA_DIR <- "/app/src/data"
-OUT_DIR  <- "/app/out"
-#DATA_DIR <- "src/data"
+OUT_DIR  <- "/app/src/out"
+#DATA_DIR <- "src/data" #for the terminal local run
 #OUT_DIR  <- "src/output"
 dir.create(OUT_DIR, showWarnings = FALSE, recursive = TRUE)
 
