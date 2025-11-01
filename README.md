@@ -23,3 +23,5 @@ And this is the structure of the repo:
       ├─ install_packages.R
       └─ app.R                      # R pipeline
 ```
+To get the data,
+
