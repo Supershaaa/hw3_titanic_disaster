@@ -23,12 +23,17 @@ And this is the structure of the repo:
       ├─ install_packages.R
       └─ app.R                      # R pipeline
 ```
+Firstly git clone the repo and move you into the working directory:
+```
+https://github.com/Supershaaa/hw3_titanic_disaster.git
+cd hw3_titanic_disaster
+```
 
-To get the data, create the data & output folders in terminal:
+And then create the data & output folders in terminal, this is where you store the data:
 ```
 mkdir -p src/data src/out
 ```
-Then download the standard Titanic data files and place them here:
+Then download the Titanic train and test dataset files from website: https://www.kaggle.com/competitions/titanic/models and place them here:
 ```
 src/data/train.csv
 src/data/test.csv
